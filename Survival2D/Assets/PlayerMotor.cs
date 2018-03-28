@@ -4,7 +4,7 @@
 public class PlayerMotor : MonoBehaviour {
 
     private Vector2 velocity = Vector2.zero;
-    //private float rotation;
+    private Vector2 rotation = Vector2.zero;
 
     private Rigidbody2D rb;
     
@@ -17,14 +17,18 @@ public class PlayerMotor : MonoBehaviour {
         velocity = _velocity;
     }
 
-    //public void Rotate(float _rotation)
-    //{
-    //    rotation = _rotation;
-    //}
+    public void Rotate(Vector2 _rotation)
+    {
+        rotation = _rotation;
+    }
+
+    private void Update()
+    {
+        PerformRotation();
+    }
 
     void FixedUpdate () {
         PerformMovement();
-        //PerformRotation();
     }
 
     void PerformMovement()
@@ -35,8 +39,10 @@ public class PlayerMotor : MonoBehaviour {
         }
     }
 
-    //void PerformRotation()
-    //{
-    //    rb.MoveRotation(rb.rotation - rotation * 100f * Time.fixedDeltaTime);
-    //}
+    void PerformRotation()
+    {
+        float angle = Mathf.Atan2(rotation.y,rotation.x) * Mathf.Rad2Deg;
+        Quaternion endRotation = Quaternion.AngleAxis(angle,Vector3.forward);
+        transform.rotation = Quaternion.Slerp(transform.rotation,endRotation,100 * Time.deltaTime);
+    }
 }
