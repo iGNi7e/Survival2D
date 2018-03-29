@@ -7,9 +7,13 @@ public class PlayerController : MonoBehaviour {
     private float speed = 10f;
 
     private PlayerMotor playerMotor;
+
     
 	void Start () {
         playerMotor = GetComponent<PlayerMotor>();
+        Camera main = FindObjectOfType<Camera>();
+        CameraFollow camerafollow = main.GetComponent<CameraFollow>();
+        camerafollow.target = gameObject.transform;
     }
 	
 	void Update () {
