@@ -17,6 +17,12 @@ public class PlayerSetup : NetworkBehaviour {
                 componentsToDisable[i].enabled = false;
             }
         }
+        else
+        {
+            Camera main = FindObjectOfType<Camera>();
+            CameraFollow camerafollow = main.GetComponent<CameraFollow>();
+            camerafollow.target = gameObject.transform;
+        }
     }
 
 }

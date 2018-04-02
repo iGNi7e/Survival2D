@@ -26,6 +26,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1574090495764012
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4282551224020158}
+  m_Layer: 0
+  m_Name: BulletSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1598887381302572
 GameObject:
   m_ObjectHideFlags: 1
@@ -81,12 +96,14 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4897235873802916}
-  - component: {fileID: 114877964431335694}
-  - component: {fileID: 114437024117785848}
+  - component: {fileID: 114381633571038800}
+  - component: {fileID: 114976694776140002}
   - component: {fileID: 50243834946492484}
   - component: {fileID: 58658162506686910}
-  - component: {fileID: 114381633571038800}
+  - component: {fileID: 114877964431335694}
+  - component: {fileID: 114437024117785848}
   - component: {fileID: 114014258441845070}
+  - component: {fileID: 114166191530350916}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -170,6 +187,19 @@ Transform:
   m_Father: {fileID: 4355428008991334}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4282551224020158
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1574090495764012}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.441, y: 1.059, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4355428008991334}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4355428008991334
 Transform:
   m_ObjectHideFlags: 1
@@ -183,6 +213,7 @@ Transform:
   - {fileID: 4879768260875618}
   - {fileID: 4003045816373222}
   - {fileID: 4218945801514850}
+  - {fileID: 4282551224020158}
   m_Father: {fileID: 4897235873802916}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
@@ -232,7 +263,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1855606558446642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.2558349, y: -1.7482166, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4355428008991334}
@@ -259,7 +290,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1855606558446642}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -301,6 +332,23 @@ MonoBehaviour:
   componentsToDisable:
   - {fileID: 114437024117785848}
   - {fileID: 114877964431335694}
+--- !u!114 &114166191530350916
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1855606558446642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa0e2505ba970f429df0d863172cdee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerWeapon:
+    name: Glock
+    damage: 23
+    range: 70
+  bulletPrefab: {fileID: 1671428928477792, guid: 9b8fe03fbb5055d4a8846ba669e9ca12,
+    type: 2}
 --- !u!114 &114381633571038800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -356,6 +404,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &114976694776140002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1855606558446642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 2
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 3
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 10
+  m_InterpolateMovement: 1
 --- !u!212 &212189991011575734
 SpriteRenderer:
   m_ObjectHideFlags: 1

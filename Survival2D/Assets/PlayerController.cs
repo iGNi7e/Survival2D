@@ -11,9 +11,9 @@ public class PlayerController : MonoBehaviour {
     
 	void Start () {
         playerMotor = GetComponent<PlayerMotor>();
-        Camera main = FindObjectOfType<Camera>();
-        CameraFollow camerafollow = main.GetComponent<CameraFollow>();
-        camerafollow.target = gameObject.transform;
+        //Camera main = FindObjectOfType<Camera>();
+        //CameraFollow camerafollow = main.GetComponent<CameraFollow>();
+        //camerafollow.target = gameObject.transform;
     }
 	
 	void Update () {
