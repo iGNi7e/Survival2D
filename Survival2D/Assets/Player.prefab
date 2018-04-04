@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4003045816373222}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4282551224020158}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4218945801514850}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,7 +65,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4675213150954608}
   - component: {fileID: 212658651207951352}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4909978858916974}
   - component: {fileID: 212372418479420536}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,9 +104,9 @@ GameObject:
   - component: {fileID: 114437024117785848}
   - component: {fileID: 114014258441845070}
   - component: {fileID: 114166191530350916}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4879768260875618}
   - component: {fileID: 212189991011575734}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4355428008991334}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4772481728579348}
   - component: {fileID: 212475859937286798}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,6 +332,8 @@ MonoBehaviour:
   componentsToDisable:
   - {fileID: 114437024117785848}
   - {fileID: 114877964431335694}
+  - {fileID: 114166191530350916}
+  remoteLayerName: RemotePlayer
 --- !u!114 &114166191530350916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -347,6 +349,7 @@ MonoBehaviour:
     name: Glock
     damage: 23
     range: 70
+    speed: 10
   bulletPrefab: {fileID: 1671428928477792, guid: 9b8fe03fbb5055d4a8846ba669e9ca12,
     type: 2}
 --- !u!114 &114381633571038800

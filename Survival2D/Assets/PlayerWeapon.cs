@@ -7,5 +7,6 @@ public class PlayerWeapon {
 
     public float damage = 23f;
     public float range = 70f;
+    public float speed = 10f;
 
 }
