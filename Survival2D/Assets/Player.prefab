@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 114877964431335694}
   - component: {fileID: 114437024117785848}
   - component: {fileID: 114014258441845070}
-  - component: {fileID: 114166191530350916}
+  - component: {fileID: 114081260758586382}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -332,9 +332,9 @@ MonoBehaviour:
   componentsToDisable:
   - {fileID: 114437024117785848}
   - {fileID: 114877964431335694}
-  - {fileID: 114166191530350916}
+  - {fileID: 114081260758586382}
   remoteLayerName: RemotePlayer
---- !u!114 &114166191530350916
+--- !u!114 &114081260758586382
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
