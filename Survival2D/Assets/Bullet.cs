@@ -7,12 +7,14 @@ public class Bullet : NetworkBehaviour {
 
     private const string PLAYER_TAG = "Player";
 
-    //[Client]
+    public PlayerWeapon weapon;
+
+    [Client] //выполняется только на клиенте
     private void OnCollisionEnter2D(Collision2D col)
     {
         if(col.collider.tag == PLAYER_TAG)
         {
-            CmdShootPlayer(col.collider.name);
+            CmdShootPlayer(col.collider.name,weapon.damage);
             Destroy(gameObject);
         } else
         {
@@ -20,8 +22,12 @@ public class Bullet : NetworkBehaviour {
         }
     }
 
-    //[Server]
-    private void CmdShootPlayer(string _ID)    {
-        Debug.Log(_ID + " has been shot");
+    [Command] //выполняются только на сервере
+    private void CmdShootPlayer(string _playerID, int _damage)
+    {
+        Debug.Log(_playerID + " has been shot");
+
+        Player _player = GameManager.GetPlayer(_playerID);
+        _player.TakeDamage(_damage);
     }
 }

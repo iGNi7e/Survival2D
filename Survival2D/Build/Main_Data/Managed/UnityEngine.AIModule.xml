@@ -219,11 +219,6 @@
         <para>True if the ray is terminated before reaching target position. Otherwise returns false.</para>
       </returns>
     </member>
-    <member name="M:UnityEngine.AI.NavMesh.RemoveAllNavMeshData">
-      <summary>
-        <para>Removes all NavMesh surfaces and links from the game.</para>
-      </summary>
-    </member>
     <member name="M:UnityEngine.AI.NavMesh.RemoveLink(UnityEngine.AI.NavMeshLinkInstance)">
       <summary>
         <para>Removes a link from the NavMesh.</para>
@@ -1360,11 +1355,6 @@ The newly built NavMeshData, or null if the NavMeshData was empty or an error oc
     <member name="F:UnityEngine.AI.OffMeshLinkType.LinkTypeManual">
       <summary>
         <para>Manually specified type of link.</para>
-      </summary>
-    </member>
-    <member name="A:UnityEngine.AIModule">
-      <summary>
-        <para>The AI module implements the path finding features in Unity.</para>
       </summary>
     </member>
   </members>

@@ -1736,11 +1736,10 @@
         <para>See MonoBehaviour.OnDisable.</para>
       </summary>
     </member>
-    <member name="M:UnityEngine.UI.AspectRatioFitter.SetDirty()">
+    <member name="M:UnityEngine.UI.AspectRatioFitter.SetDirty">
       <summary>
         <para>Mark the AspectRatioFitter as dirty.</para>
       </summary>
-      <param name="delayUpdate"></param>
     </member>
     <member name="M:UnityEngine.UI.AspectRatioFitter.SetLayoutHorizontal">
       <summary>
@@ -1909,7 +1908,7 @@
     <member name="F:UnityEngine.UI.CanvasScaler.ScaleMode.ScaleWithScreenSize">
       <summary>
         <para>Using the Scale With Screen Size mode, positions and sizes can be specified according to the pixels of a specified reference resolution.
-If the current screen resolution is larger than the reference resolution, the Canvas will keep having only the resolution of the reference resolution, but will scale up in order to fit the screen. If the current screen resolution is smaller than the reference resolution, the Canvas will similarly be scaled down to fit.</para>
+If the current screen resolution is larger then the reference resolution, the Canvas will keep having only the resolution of the reference resolution, but will scale up in order to fit the screen. If the current screen resolution is smaller than the reference resolution, the Canvas will similarly be scaled down to fit.</para>
       </summary>
     </member>
     <member name="T:UnityEngine.UI.CanvasScaler.ScreenMatchMode">
@@ -3813,11 +3812,6 @@ A placeholder graphic can be used to show subtle hints or make it more obvious t
     <member name="P:UnityEngine.UI.InputField.textComponent">
       <summary>
         <para>The Text component that is going to be used to render the text to screen.</para>
-      </summary>
-    </member>
-    <member name="P:UnityEngine.UI.InputField.touchScreenKeyboard">
-      <summary>
-        <para>The TouchScreenKeyboard being used to edit the Input Field.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.UI.InputField.wasCanceled">
